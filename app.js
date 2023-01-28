@@ -14,9 +14,11 @@ function randomise(){
 
     document.getElementById('excuse').innerHTML = whoHolder + ' ' + actionHolder + ' ' + whatHolder + ' ' + whenHolder
 }
-
-window.onload 
-
+window.onload = () => {
+    document.querySelector('#btclick').addEventListener('click',() => {
+        randomise()
+    });
+}
 randomise();
 
 
