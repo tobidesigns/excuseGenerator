@@ -1,7 +1,6 @@
-#myCard{
-    padding: 40px, 40px, 40px, 40px !important;
-};
-
-body{
-    background-color: red !important;
+#center{
+margin: auto;
+  width: 50%;
+  padding-top: 250px;
+  height: 50%;
 }
