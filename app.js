@@ -5,21 +5,15 @@ let action = ['ate', 'crushed', 'destroyed', 'damaged'];
 let what = ['my homework', 'the car', 'the cake', 'my phone'];
 let when = ['right now', 'before class', 'last week', 'many moons ago']
 
-function randomise(){
-    
-    let whoHolder = who[Math.floor(Math.random()*who.length)]
-    let actionHolder = action[Math.floor(Math.random()* action.length)]
-    let whatHolder =what[Math.floor(Math.random()* what.length)]
-    let whenHolder =when[Math.floor(Math.random()* when.length)]
 
-    document.getElementById('excuse').innerHTML = whoHolder + ' ' + actionHolder + ' ' + whatHolder + ' ' + whenHolder
+function randomiseRefactor (x){
+    return x[Math.floor(Math.random()*x.length)]
 }
+
+document.getElementById('excuse').innerHTML = randomiseRefactor(who) + ' ' + randomiseRefactor(action) + ' ' + randomiseRefactor(what) + ' ' + randomiseRefactor(when)
+
 window.onload = () => {
     document.querySelector('#btclick').addEventListener('click',() => {
-        randomise()
+        document.getElementById('excuse').innerHTML = randomiseRefactor(who) + ' ' + randomiseRefactor(action) + ' ' + randomiseRefactor(what) + ' ' + randomiseRefactor(when)
     });
 }
-randomise();
-
-
-//document.getElementById(excuse).innerHTML = randomise()
